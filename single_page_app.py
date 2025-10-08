@@ -550,7 +550,7 @@ with st.sidebar:
     st.markdown("<h2 style='text-align: center; color: #FF6347;'>Step 1: Configure Settings</h2>", unsafe_allow_html=True)
     
     # Preset buttons
-    with st.container(border=True):
+    with st.container():
         st.subheader("⚙️ Quick Setup", divider="blue")
         col1, col2, col3 = st.columns(3)
         
@@ -575,7 +575,7 @@ with st.sidebar:
             preset_labels = {'optimal': "🎯 Optimal", 'speed': "⚡ Speed", 'accuracy': "🏆 Accuracy"}
             
     # Performance settings
-    with st.container(border=True):
+    with st.container():
         st.subheader("⚡ Model & Performance", divider="rainbow")
         
         frame_skip = st.slider("Frame Skip", 1, 10, st.session_state.get('frame_skip_default', 1),
@@ -617,7 +617,7 @@ with st.sidebar:
         analysis_interval = st.slider("Analysis Interval (sec)", 1, 10, st.session_state.get('analysis_interval_default', 2))
     
     # Tracking settings
-    with st.container(border=True):
+    with st.container():
         st.subheader("🎯 Tracking & Detection", divider="rainbow")
         
         track_people_only = st.checkbox("Track People Only", st.session_state.get('track_people_only_default', True))
@@ -673,7 +673,7 @@ PRESET_STREAMS = {
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col1:
-    with st.container(border=True):
+    with st.container():
         st.subheader("📹 Stream Selection", divider="grey")
         st.write("Select a preset stream or enter custom URL:")
 
@@ -698,7 +698,7 @@ if youtube_url != st.session_state.current_url:
     st.session_state.current_url = youtube_url
 
 with col2:
-    with st.container(border=True):
+    with st.container():
         st.subheader("📺 Video Stream", divider="grey")
         video_placeholder = st.empty()
         
@@ -710,7 +710,7 @@ with col2:
             )
 
 with col3:
-    with st.container(border=True):
+    with st.container():
         st.markdown("<h2 style='text-align: center; color: #FF6347;'>Step 3: Punch it!</h2>", unsafe_allow_html=True)
         st.subheader("▶️ Control Panel", divider="grey")
         
@@ -752,7 +752,7 @@ with col3:
 # STEP 10: VISUALIZATION AREA
 # ===================================================================================
 
-with st.container(border=True):
+with st.container():
     col2, col3 = st.columns([1, 1])
     
     with col2:

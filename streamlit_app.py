@@ -79,7 +79,7 @@ class StreamlitApp:
                        unsafe_allow_html=True)
             
             # Preset buttons using ConfigManager
-            with st.container(border=True):
+            with st.container():
                 st.subheader("⚙️ Quick Setup", divider="blue")
                 col1, col2, col3 = st.columns(3)
                 
@@ -159,7 +159,7 @@ class StreamlitApp:
     
     def render_performance_settings(self):
         """Render performance configuration UI"""
-        with st.container(border=True):
+        with st.container():
             st.subheader("⚡ Model & Performance", divider="rainbow")
             
             frame_skip = st.slider("Frame Skip", 1, 10, 
@@ -208,7 +208,7 @@ class StreamlitApp:
     
     def render_tracker_settings(self):
         """Render tracker configuration UI"""
-        with st.container(border=True):
+        with st.container():
             st.subheader("🎯 Tracking & Detection", divider="rainbow")
             
             track_people_only = st.checkbox("Track People Only", 
@@ -315,7 +315,7 @@ class StreamlitApp:
         col1, col2, col3 = st.columns([1, 2, 1])
         
         with col1:
-            with st.container(border=True):
+            with st.container():
                 st.subheader("📹 Stream Selection", divider="grey")
                 st.write("Select a preset stream or enter custom URL:")
                 
@@ -362,7 +362,7 @@ class StreamlitApp:
     
     def render_video_preview(self, youtube_url: str):
         """Render video preview"""
-        with st.container(border=True):
+        with st.container():
             st.subheader("📺 Video Stream", divider="grey")
             video_placeholder = st.empty()
             
@@ -376,7 +376,7 @@ class StreamlitApp:
     
     def render_control_panel(self, youtube_url: str):
         """Render control panel"""
-        with st.container(border=True):
+        with st.container():
             st.markdown("<h2 style='text-align: center; color: #FF6347;'>Step 3: Punch it!</h2>", 
                        unsafe_allow_html=True)
             st.subheader("▶️ Control Panel", divider="grey")
@@ -427,7 +427,7 @@ class StreamlitApp:
     
     def render_visualization_area(self):
         """Render main visualization area"""
-        with st.container(border=True):
+        with st.container():
             col2, col3 = st.columns([1, 1])
             
             with col2:
